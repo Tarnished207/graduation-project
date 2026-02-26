@@ -1,0 +1,148 @@
+### 测试1：注册一个新用户
+POST http://localhost:9090/sysUser/register
+Content-Type: application/json
+
+{
+  "username": "RQ",
+  "password": "666666",
+  "nickname": "QQQ超级大王",
+  "phone": "18718936889"
+}
+
+### 测试2：再次查询列表
+GET http://localhost:9090/sysUser/list
+
+### 测试3：登录成功 (用刚才注册的小明账号)
+POST http://localhost:9090/sysUser/login
+Content-Type: application/json
+
+{
+  "username": "xiaoming",
+  "password": "123456"
+}
+
+### 测试4：登录失败 (故意输错密码)
+POST http://localhost:9090/sysUser/login
+Content-Type: application/json
+
+{
+  "username": "xiaoming",
+  "password": "888"
+}
+
+### 测试5：小明添加一只叫“旺财”的狗
+POST http://localhost:9090/petInfo/add
+Content-Type: application/json
+
+{
+  "userId": 16,
+  "nickname": "豆泥",
+  "breed": "暹罗猫",
+  "type": 0,
+  "sex": 0,
+  "weight": 12
+}
+
+### 测试6：小明添加一只叫“咪咪”的猫
+POST http://localhost:9090/petInfo/add
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "nickname": "咪咪",
+  "breed": "布偶",
+  "type": 1,
+  "sex": 1,
+  "weight": 5.2
+}
+
+### 测试7：查询小明(ID=2)所有的宠物
+GET http://localhost:9090/petInfo/list/2
+
+### 测试8：给“旺财”(假设它的ID是1) 添加一个早餐计划
+POST http://localhost:9090/feedPlan/add
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "petId": 3,
+  "planName": "早餐喂西蓝花",
+  "planTime": "08:00",
+  "foodName": "西蓝花",
+  "amount": "80g"
+}
+
+### 测试9：给“旺财”(ID=1) 添加一个晚餐计划
+POST http://localhost:9090/feedPlan/add
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "petId": 1,
+  "planName": "晚餐吃罐头",
+  "planTime": "18:00",
+  "foodName": "牛肉罐头",
+  "amount": "1罐"
+}
+
+### 测试10：查看“旺财”所有的喂食计划
+GET http://localhost:9090/feedPlan/list/1
+
+### 测试11：给“旺财”(ID=1) 记录一次打疫苗
+POST http://localhost:9090/healthRecord/add
+Content-Type: application/json
+
+{
+  "petId": 1,
+  "recordDate": "2025-12-20",
+  "recordType": "疫苗",
+  "title": "狂犬疫苗接种",
+  "description": "接种了第一针，状态良好。",
+  "cost": 120.0
+}
+
+### 测试12：给“旺财”(ID=1) 记录一次生病
+POST http://localhost:9090/healthRecord/add
+Content-Type: application/json
+
+{
+  "petId": 1,
+  "recordDate": "2025-12-24",
+  "recordType": "生病",
+  "title": "感冒检查",
+  "description": "有点流鼻涕，开了消炎药。",
+  "cost": 50.5
+}
+
+### 测试13：查看“旺财”的病历本
+GET http://localhost:9090/healthRecord/list/1
+
+### 测试14：商家上架一个猫罐头
+POST http://localhost:9090/product/add
+Content-Type: application/json
+
+{
+  "name": "劣质金枪鱼罐头",
+  "price": 9.9,
+  "description": "劣质金枪鱼，猫咪的最不爱",
+  "stock": 20,
+  "category": "food"
+}
+
+### 测试15：查看商品列表 (记住返回的 id，假设是1)
+GET http://localhost:9090/product/list
+
+### 测试16：小明(ID=2) 下单买了商品(ID=1)
+POST http://localhost:9090/orders/add
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "productId": 1,
+  "quantity": 2,
+  "totalAmount": 39.8,
+  "address": "学校宿舍A栋101"
+}
+
+### 测试17：查看小明的订单
+GET http://localhost:9090/orders/list/2

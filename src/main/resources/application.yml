@@ -1,0 +1,40 @@
+# 设置后端端口
+server:
+  port: 9090
+
+spring:
+  # 1. 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pet_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  # 2. 邮件配置 (注意：必须和 datasource 对齐，不能缩进到里面去)
+  mail:
+    host: smtp.qq.com
+    username: 3080828852@qq.com    # 你的邮箱
+    password: hsrjzfcfiggsddgj     # 你的授权码
+    default-encoding: UTF-8
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+  # 3. 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  upload-dir: E:/graduation project/graduation_project_files/
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
