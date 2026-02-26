@@ -1,0 +1,150 @@
+/*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Fredoka+One&family=Varela+Round&display=swap');*/
+
+
+/*.user-center-layout {*/
+/*    min-height: 100vh;*/
+/*    background-color: #f7f9fc;*/
+/*    background-image: radial-gradient(#e3e8ee 1px, transparent 1px);*/
+/*    background-size: 20px 20px;*/
+/*    padding-top: 80px;*/
+/*    position: relative;*/
+/*    overflow-x: hidden;*/
+/*}*/
+
+/*.bg-decoration {*/
+/*    position: absolute;*/
+/*    top: -100px; right: -100px;*/
+/*    width: 500px; height: 500px;*/
+/*    background: linear-gradient(135deg, #fff5e6 0%, #ffe4e4 100%);*/
+/*    border-radius: 50%;*/
+/*    filter: blur(60px);*/
+/*    opacity: 0.6;*/
+/*    z-index: 0;*/
+/*}*/
+
+/*.main-container {*/
+/*    max-width: 1100px;*/
+/*    margin: 40px auto;*/
+/*    padding: 0 20px;*/
+/*    position: relative;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.grid-layout {*/
+/*    display: grid;*/
+/*    grid-template-columns: 320px 1fr;*/
+/*    gap: 30px;*/
+/*}*/
+
+/*!* ================== 左侧：名片卡 ================== *!*/
+/*.profile-card {*/
+/*    background: white;*/
+/*    border-radius: 20px;*/
+/*    overflow: hidden;*/
+/*    box-shadow: 0 10px 40px rgba(0,0,0,0.06);*/
+/*    text-align: center;*/
+/*    position: sticky;*/
+/*    top: 100px;*/
+/*    transition: 0.3s;*/
+/*}*/
+/*.profile-card:hover { transform: translateY(-5px); }*/
+
+/*.card-header-bg {*/
+/*    height: 120px;*/
+/*    background: linear-gradient(120deg, #ff9f43 0%, #ffc048 100%);*/
+/*    position: relative;*/
+/*}*/
+
+/*.waves { width: 100%; height: 50px; position: absolute; bottom: 0; left: 0; }*/
+/*.parallax > use { animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite; }*/
+/*.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }*/
+/*.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }*/
+/*.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }*/
+/*.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }*/
+/*@keyframes move-forever {*/
+/*    0% { transform: translate3d(-90px,0,0); }*/
+/*    100% { transform: translate3d(85px,0,0); }*/
+/*}*/
+
+/*.avatar-section { margin-top: -60px; position: relative; z-index: 2; margin-bottom: 15px; }*/
+/*.avatar-wrapper { position: relative; display: inline-block; cursor: pointer; }*/
+/*.real-avatar { border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: white; transition: 0.3s; }*/
+/*.upload-mask {*/
+/*    position: absolute; top: 0; left: 0; width: 100%; height: 100%;*/
+/*    border-radius: 50%; background: rgba(0,0,0,0.5); border: 5px solid transparent;*/
+/*    display: flex; flex-direction: column; justify-content: center; align-items: center;*/
+/*    color: white; opacity: 0; transition: 0.3s;*/
+/*}*/
+/*.avatar-wrapper:hover .upload-mask { opacity: 1; }*/
+
+/*.user-name { font-size: 22px; font-weight: 800; color: #333; margin-bottom: 5px; }*/
+/*.user-id { font-size: 12px; color: #999; margin-bottom: 15px; font-family: monospace; }*/
+/*.user-tags { margin-bottom: 25px; }*/
+/*.tag-badge { background: #fff5e6; color: #ff9f43; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }*/
+
+/*.action-section { padding: 0 20px 30px; display: flex; justify-content: center; gap: 10px; }*/
+
+/*!* ================== 右侧：设置面板 ================== *!*/
+/*.settings-card {*/
+/*    background: white;*/
+/*    border-radius: 20px;*/
+/*    box-shadow: 0 10px 40px rgba(0,0,0,0.04);*/
+/*    padding: 10px 30px 30px;*/
+/*    min-height: 550px;*/
+/*}*/
+
+/*.custom-tabs >>> .el-tabs__nav-wrap::after { height: 1px; background-color: #f0f0f0; }*/
+/*.custom-tabs >>> .el-tabs__item { height: 60px; line-height: 60px; font-size: 16px; color: #666; }*/
+/*.custom-tabs >>> .el-tabs__item.is-active { color: #ff9f43; font-weight: bold; }*/
+/*.custom-tabs >>> .el-tabs__active-bar { background-color: #ff9f43; height: 3px; border-radius: 3px; }*/
+
+/*.panel-content { padding-top: 20px; animation: fadeIn 0.5s ease; }*/
+/*.panel-header h3 { margin: 0 0 5px 0; color: #333; font-size: 20px; }*/
+/*.panel-header p { margin: 0 0 25px 0; color: #999; font-size: 13px; }*/
+
+/*.form-grid { max-width: 600px; }*/
+/*.form-grid.narrow { max-width: 400px; }*/
+/*.input-row { display: flex; gap: 20px; }*/
+/*.input-row .el-form-item { flex: 1; }*/
+
+/*.custom-input >>> .el-input__inner { border-radius: 8px; border: 1px solid #eee; transition: 0.3s; padding-left: 35px; }*/
+/*.custom-input >>> .el-input__inner:focus { border-color: #ff9f43; box-shadow: 0 0 0 3px rgba(255,159,67,0.1); }*/
+/*.custom-input >>> .el-input__prefix { left: 8px; color: #aaa; }*/
+
+/*.save-btn { width: 100%; border-radius: 8px; font-weight: bold; letter-spacing: 1px; margin-top: 10px; }*/
+/*.el-button--primary { background: linear-gradient(90deg, #ff9f43, #ffc048); border: none; box-shadow: 0 4px 10px rgba(255,159,67,0.3); }*/
+/*.el-button--primary:hover { opacity: 0.9; transform: translateY(-1px); }*/
+
+/*!* ================== 导航栏 (固定样式 - 与首页一致) ================== *!*/
+/*.nav-header {*/
+/*    position: fixed; top: 0; left: 0; width: 100%; height: 80px;*/
+/*    display: flex; align-items: center; padding: 0 40px; z-index: 1000;*/
+/*    background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);*/
+/*    backdrop-filter: blur(10px);*/
+/*}*/
+/*.nav-left { flex: 1; display: flex; align-items: center; }*/
+/*.brand { display: flex; align-items: center; cursor: pointer; gap: 15px; }*/
+/*.logo-img { height: 50px; }*/
+/*.brand-text { font-family: 'Fredoka One', cursive; font-size: 24px; font-weight: 800; color: #ff9f43; }*/
+/*.logo-icon { font-size: 26px; color: #ff9f43; transform: rotate(20deg); }*/
+
+/*.nav-center { flex: 2; display: flex; gap: 30px; justify-content: center; }*/
+/*.nav-item { cursor: pointer; font-weight: 500; font-size: 15px; color: #555; transition: 0.2s; }*/
+/*.nav-item:hover { color: #ff9f43; font-weight: bold; }*/
+
+/*.nav-right { flex: 1; display: flex; justify-content: flex-end; }*/
+/*.user-pill { display: flex; align-items: center; gap: 10px; background: #f5f5f5; padding: 4px 15px 4px 4px; border-radius: 30px; cursor: pointer; transition: 0.3s; }*/
+/*.user-pill:hover { background: #fff3e0; }*/
+/*.username { font-size: 13px; font-weight: bold; color: #333; }*/
+
+/*.fade-in-up { animation: fadeInUp 0.6s ease backwards; }*/
+/*.delay-100 { animation-delay: 0.1s; }*/
+/*@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }*/
+
+/*@media (max-width: 768px) {*/
+/*    .grid-layout { grid-template-columns: 1fr; }*/
+/*    .profile-card { position: static; }*/
+/*    .nav-center { display: none; }*/
+/*    .user-center-layout { padding-top: 70px; }*/
+/*}*/
